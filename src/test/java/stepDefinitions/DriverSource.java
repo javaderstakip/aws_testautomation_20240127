@@ -19,10 +19,14 @@ public enum DriverSource {
     private WebDriver driver;
 
     public WebDriver getDriver(){
-        if (driver == null){
-            options.setHeadless(true);
-            driver = new ChromeDriver(options);
-        }
-        return driver;
+//        if (driver == null){
+//            options.setHeadless(true);
+//            driver = new ChromeDriver(options);
+//        }
+//        return driver;
+    //ChromeOptions options = new ChromeOptions();
+    options.setHeadless(true);
+    WebDriver driver = new ChromeDriver(options);
+    return driver;
     }
 }

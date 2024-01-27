@@ -13,7 +13,7 @@ public class BaseTest {
 //    driver.get("https://selenium.dev");
 //    driver.quit();
 
-    ChromeOptions options = new ChromeOptions();
+    //ChromeOptions options = new ChromeOptions();
     protected WebDriver driver;
     public BaseTest() {
         this.driver = DriverSource.INSTANCE.getDriver();
