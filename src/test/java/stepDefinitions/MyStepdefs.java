@@ -12,6 +12,6 @@ public class MyStepdefs {
 
     @Then("pencereyi kapat")
     public void pencereyiKapat() {
-        System.out.println("pencere kapandi..");
+        System.out.println("pencere kapandi...");
     }
 }
