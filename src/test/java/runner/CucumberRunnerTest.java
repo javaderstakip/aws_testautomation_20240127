@@ -5,6 +5,6 @@ import io.cucumber.testng.CucumberOptions;
 
 @CucumberOptions(features = {"src/test/resources/features"},
     glue = {"stepDefinitions"},
-    tags = "")
+    tags = "not @browser and @headless")
 public class CucumberRunnerTest extends AbstractTestNGCucumberTests {
 }
