@@ -15,18 +15,18 @@ public enum DriverSource {
     //only one instance
     INSTANCE;
     ChromeOptions options = new ChromeOptions();
-
     private WebDriver driver;
 
     public WebDriver getDriver(){
-//        if (driver == null){
-//            options.setHeadless(true);
-//            driver = new ChromeDriver(options);
-//        }
-//        return driver;
+        if (driver == null){
+            driver = new ChromeDriver();
+            //options.setHeadless(true);
+            //driver = new ChromeDriver(options);
+        }
+        return driver;
     //ChromeOptions options = new ChromeOptions();
-    options.setHeadless(true);
-    WebDriver driver = new ChromeDriver(options);
-    return driver;
+//    options.setHeadless(true);
+//    WebDriver driver = new ChromeDriver(options);
+//    return driver;
     }
 }
