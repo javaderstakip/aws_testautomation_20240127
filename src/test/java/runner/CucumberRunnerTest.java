@@ -7,4 +7,5 @@ import io.cucumber.testng.CucumberOptions;
     glue = {"stepDefinitions"},
     tags = "")
 public class CucumberRunnerTest extends AbstractTestNGCucumberTests {
+    //işlemi değiştirmesin
 }
