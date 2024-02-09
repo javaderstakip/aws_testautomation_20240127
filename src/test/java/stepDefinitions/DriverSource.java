@@ -14,9 +14,10 @@ public enum DriverSource {
     public WebDriver getDriver(){
         if (driver == null){
             driver = new ChromeDriver();
-            options.addArguments("--headless");// addArguments kullandık.
+            //options.addArguments("--headless");// addArguments kullandık.
+            //driver = new ChromeDriver(options);
+            options.addArguments("headless");
             driver = new ChromeDriver(options);
-            //options.addArguments("headless");
         }
         return driver;
     }
