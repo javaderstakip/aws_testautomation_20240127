@@ -6,12 +6,6 @@ import org.openqa.selenium.chrome.ChromeOptions;
 
 public enum DriverSource {
 
-//    ChromeOptions options = new ChromeOptions();
-//    options.setHeadless(true);
-//    WebDriver driver = new ChromeDriver(options);
-//    driver.get("https://selenium.dev");
-//    driver.quit();
-
     //only one instance
     INSTANCE;
     ChromeOptions options = new ChromeOptions();
@@ -20,13 +14,10 @@ public enum DriverSource {
     public WebDriver getDriver(){
         if (driver == null){
             driver = new ChromeDriver();
-            //options.setHeadless(true);
-            //driver = new ChromeDriver(options);
+            options.addArguments("--headless");
+            driver = new ChromeDriver(options);
+            //options.addArguments("headless");
         }
         return driver;
-    //ChromeOptions options = new ChromeOptions();
-//    options.setHeadless(true);
-//    WebDriver driver = new ChromeDriver(options);
-//    return driver;
     }
 }
